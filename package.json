@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build && mv build docs",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+		"predeploy" : "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "homepage": "https://knt800run.github.io/refrigerator-app",
   "eslintConfig": {
