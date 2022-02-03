@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+}
+
+p {
+  color: rgb(65, 65, 65);
+}
+
+.title {
+  font-weight: bold;
+}
+
+.input-area {
+  background-color: orange;
+}
+
+.fridge-area {
+  background-color: rgb(100, 136, 255);
+}
+
+.freezer-area {
+  background-color: rgb(69, 199, 238);
+}
+
+.veggie-area {
+  background-color: rgb(29, 232, 29);
+}
