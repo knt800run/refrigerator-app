@@ -4,19 +4,32 @@ body {
 
 p {
   color: rgb(65, 65, 65);
-  margin: 0;
+  margin: 4px;
+}
+
+li {
+  list-style: square;
 }
 
 input {
-  padding: 0;
+  padding: 0 4px;
   width: 110px;
   height: 25px;
   border: none;
+  border-radius: 8px;
 }
 
 button {
   height: 25px;
   border: none;
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+button:hover {
+  background-color: #ff7fff;
+  color: #fff;
+  cursor: pointer;
 }
 
 .title {
@@ -27,9 +40,10 @@ button {
 .input-area {
   background-color: orange;
   width: 500px;
+  height: 50px;
   margin: 4px auto;
   padding: 4px;
-  border-radius: 5px;
+  border-radius: 7px;
   text-align: center;
   vertical-align: middle;
   align-items: center;
@@ -38,28 +52,32 @@ button {
 .fridge-area {
   background-color: rgb(100, 136, 255);
   width: 500px;
+  min-height: 200px;
   margin: 8px auto;
   padding: 4px;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .freezer-area {
   background-color: rgb(69, 199, 238);
   width: 500px;
+  min-height: 200px;
   margin: 8px auto;
   padding: 4px;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .veggie-area {
   background-color: rgb(29, 232, 29);
   width: 500px;
+  min-height: 200px;
   margin: 8px auto;
   padding: 4px;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .list-row {
   display: flex;
   align-items: center;
+  padding-bottom: 4px;
 }
