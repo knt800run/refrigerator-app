@@ -14,7 +14,7 @@ export const App = () => {
 				<p className="title">冷蔵庫エリア</p>
 				<ul>
 					<li>
-						<div>
+						<div className="list-row">
 							<p>牛肉</p>
 							<button>編集</button>
 							<button>削除</button>
@@ -26,7 +26,7 @@ export const App = () => {
 				<p className="title">冷凍庫エリア</p>
 				<ul>
 					<li>
-						<div>
+						<div className="list-row">
 							<p>ハーゲンダッツ</p>
 							<button>編集</button>
 							<button>削除</button>
@@ -38,7 +38,7 @@ export const App = () => {
 				<p className="title">野菜室エリア</p>
 				<ul>
 					<li>
-						<div>
+						<div className="list-row">
 							<p>にんじん</p>
 							<button>編集</button>
 							<button>削除</button>

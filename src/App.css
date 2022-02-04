@@ -4,12 +4,19 @@ body {
 
 p {
   color: rgb(65, 65, 65);
+  margin: 0;
 }
 
 input {
   padding: 0;
   width: 110px;
-  height: 20px;
+  height: 25px;
+  border: none;
+}
+
+button {
+  height: 25px;
+  border: none;
 }
 
 .title {
@@ -20,23 +27,39 @@ input {
 .input-area {
   background-color: orange;
   width: 500px;
-  margin: 0 auto;
+  margin: 4px auto;
+  padding: 4px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
 }
 
 .fridge-area {
   background-color: rgb(100, 136, 255);
   width: 500px;
-  margin: 0 auto;
+  margin: 8px auto;
+  padding: 4px;
+  border-radius: 5px;
 }
 
 .freezer-area {
   background-color: rgb(69, 199, 238);
   width: 500px;
-  margin: 0 auto;
+  margin: 8px auto;
+  padding: 4px;
+  border-radius: 5px;
 }
 
 .veggie-area {
   background-color: rgb(29, 232, 29);
   width: 500px;
-  margin: 0 auto;
+  margin: 8px auto;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
 }
