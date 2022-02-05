@@ -4,7 +4,7 @@ body {
 
 p {
   color: rgb(65, 65, 65);
-  margin: 4px;
+  margin: 0 6px;
 }
 
 li {
@@ -17,6 +17,15 @@ input {
   height: 25px;
   border: none;
   border-radius: 8px;
+}
+
+select {
+  padding: 0 4px;
+  width: 85px;
+  height: 25px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
 }
 
 button {
@@ -38,9 +47,9 @@ button:hover {
 }
 
 .input-area {
-  background-color: orange;
+  background-color: rgb(187, 238, 69);
   width: 500px;
-  height: 50px;
+  height: 100px;
   margin: 4px auto;
   padding: 4px;
   border-radius: 7px;
@@ -50,7 +59,7 @@ button:hover {
 }
 
 .fridge-area {
-  background-color: rgb(100, 136, 255);
+  background-color: rgb(69, 170, 238);
   width: 500px;
   min-height: 200px;
   margin: 8px auto;
@@ -68,7 +77,7 @@ button:hover {
 }
 
 .veggie-area {
-  background-color: rgb(29, 232, 29);
+  background-color: rgb(69, 238, 215);
   width: 500px;
   min-height: 200px;
   margin: 8px auto;
