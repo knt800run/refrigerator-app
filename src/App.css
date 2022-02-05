@@ -13,10 +13,11 @@ li {
 
 input {
   padding: 0 4px;
-  width: 110px;
+  width: 140px;
   height: 25px;
   border: none;
   border-radius: 8px;
+  outline: none;
 }
 
 select {
@@ -26,6 +27,7 @@ select {
   border: none;
   border-radius: 8px;
   text-align: center;
+  outline: none;
 }
 
 button {
@@ -49,7 +51,7 @@ button:hover {
 .input-area {
   background-color: rgb(187, 238, 69);
   width: 500px;
-  height: 100px;
+  height: 120px;
   margin: 4px auto;
   padding: 4px;
   border-radius: 7px;
