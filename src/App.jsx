@@ -33,11 +33,47 @@ export const App = () => {
 		if (inputInfo.keepArea === "冷蔵庫") {
 			const newFoods = [...fridgeFoods, inputInfo];
 			setFridgeFoods(newFoods);
+			setInputInfo({
+				foodName: "",
+				exp: "",
+				qty: "",
+				keepArea: ""
+			});
 		} else if (inputInfo.keepArea === "冷凍庫") {
 			const newFoods = [...freezerFoods, inputInfo];
 			setFreezerFoods(newFoods);
+			setInputInfo({
+				foodName: "",
+				exp: "",
+				qty: "",
+				keepArea: ""
+			});
 		} else if (inputInfo.keepArea === "野菜室") {
 			const newFoods = [...veggieFoods, inputInfo];
+			setVeggieFoods(newFoods);
+			setInputInfo({
+				foodName: "",
+				exp: "",
+				qty: "",
+				keepArea: ""
+			});
+		} else {
+			return;
+		}
+	};
+
+	const onClickDelete = (food,index) => {
+		if (food.keepArea === "冷蔵庫") {
+			const newFoods = [...fridgeFoods];
+			newFoods.splice(index, 1);
+			setFridgeFoods(newFoods);
+		} else if (food.keepArea === "冷凍庫") {
+			const newFoods = [...freezerFoods];
+			newFoods.splice(index, 1);
+			setFreezerFoods(newFoods);
+		} else if (food.keepArea === "野菜室") {
+			const newFoods = [...veggieFoods];
+			newFoods.splice(index, 1);
 			setVeggieFoods(newFoods);
 		} else {
 			return;
@@ -70,7 +106,7 @@ export const App = () => {
 									<p>{food.exp}</p>
 									<p>{food.qty}</p>
 									<button>編集</button>
-									<button>削除</button>
+									<button onClick={() => onClickDelete(food,index)}>削除</button>
 								</div>
 							</li>
 						);
@@ -88,7 +124,7 @@ export const App = () => {
 									<p>{food.exp}</p>
 									<p>{food.qty}</p>
 									<button>編集</button>
-									<button>削除</button>
+									<button onClick={() => onClickDelete(food,index)}>削除</button>
 								</div>
 							</li>
 						);
@@ -106,7 +142,7 @@ export const App = () => {
 									<p>{food.exp}</p>
 									<p>{food.qty}</p>
 									<button>編集</button>
-									<button>削除</button>
+									<button onClick={() => onClickDelete(food,index)}>削除</button>
 								</div>
 							</li>
 						);
