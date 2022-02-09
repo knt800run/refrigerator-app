@@ -10,18 +10,13 @@ export const App = () => {
 		keepArea: ""
 	});
 
-	const [fridgeFoods, setFridgeFoods] = useState([
-		{foodName: "牛乳", exp: "2022-06-07", qty: "1パック", keepArea: "冷蔵庫"},
-		{foodName: "豚肉", exp: "2022-02-27", qty: "200g", keepArea: "冷蔵庫"},
-	]);
-	const [freezerFoods, setFreezerFoods] = useState([
-		{foodName: "ハーゲンダッツ", exp: "", qty: "3個", keepArea: "冷凍庫"},
-	]);
-	const [veggieFoods, setVeggieFoods] = useState([
-		{foodName: "にんじん", exp: "2022-02-07", qty: "2本", keepArea: "野菜室"},
-	]);
+	const [fridgeFoods, setFridgeFoods] = useState([]);
+	const [freezerFoods, setFreezerFoods] = useState([]);
+	const [veggieFoods, setVeggieFoods] = useState([]);
 
-	const onChange = (e) => {
+	const [editShowFlag, setEditShowFlag] = useState(true);
+
+	const onChangeInfo = (e) => {
 		const target = e.target;
 		const value = target.value;
 		const name = target.name;
@@ -80,14 +75,18 @@ export const App = () => {
 		}
 	};
 
+	const onClickEdit = (e) => {
+		console.log(e.currentTarget);
+	};
+
 	return (
 		<>
 			<div className="input-area">
 				<h3>冷蔵庫管理アプリ</h3>
-				<input name="foodName" type="text" placeholder="食品名を入力" value={inputInfo.foodName} onChange={onChange} />
-				<input name="exp" type="date" value={inputInfo.exp} onChange={onChange} />
-				<input name="qty" type="text" placeholder="個数を入力" value={inputInfo.qty} onChange={onChange} />
-				<select name="keepArea" value={inputInfo.keepArea} onChange={onChange}>
+				<input name="foodName" type="text" placeholder="食品名を入力" value={inputInfo.foodName} onChange={onChangeInfo} />
+				<input name="exp" type="date" value={inputInfo.exp} onChange={onChangeInfo} />
+				<input name="qty" type="text" placeholder="個数を入力" value={inputInfo.qty} onChange={onChangeInfo} />
+				<select name="keepArea" value={inputInfo.keepArea} onChange={onChangeInfo}>
 					<option value="" disabled>保存場所</option>
 					<option value="冷蔵庫">冷蔵庫</option>
 					<option value="冷凍庫">冷凍庫</option>
@@ -100,12 +99,12 @@ export const App = () => {
 				<ul>
 					{fridgeFoods.map((food,index) => {
 						return (
-							<li key={index}>
+							<li key={food.foodName}>
 								<div className="list-row">
 									<p>{food.foodName}</p>
 									<p>{food.exp}</p>
 									<p>{food.qty}</p>
-									<button>編集</button>
+									<button onClick={(e) => onClickEdit(e)}>{ editShowFlag ? "編集" : "編集完了" }</button>
 									<button onClick={() => onClickDelete(food,index)}>削除</button>
 								</div>
 							</li>
@@ -118,12 +117,12 @@ export const App = () => {
 				<ul>
 					{freezerFoods.map((food,index) => {
 						return (
-							<li key={index}>
+							<li key={food.foodName}>
 								<div className="list-row">
 									<p>{food.foodName}</p>
 									<p>{food.exp}</p>
 									<p>{food.qty}</p>
-									<button>編集</button>
+									<button onClick={() => onClickEdit(food,index)}>編集</button>
 									<button onClick={() => onClickDelete(food,index)}>削除</button>
 								</div>
 							</li>
@@ -136,12 +135,12 @@ export const App = () => {
 				<ul>
 					{veggieFoods.map((food,index) => {
 						return (
-							<li key={index}>
+							<li key={food.foodName}>
 								<div className="list-row">
 									<p>{food.foodName}</p>
 									<p>{food.exp}</p>
 									<p>{food.qty}</p>
-									<button>編集</button>
+									<button onClick={() => onClickEdit(food,index)}>編集</button>
 									<button onClick={() => onClickDelete(food,index)}>削除</button>
 								</div>
 							</li>
